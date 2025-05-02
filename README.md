@@ -1,6 +1,6 @@
 # Snake Game
 
-A classic Snake game implementation in Python using Pygame.
+A classic Snake game in Python built using Cursor.
 
 
 ## Features

@@ -21,11 +21,12 @@ class Snake:
     def get_head_position(self):
         return self.positions[0]
 
-    def update(self):
+    def update(self, ghost_mode=False):
         cur = self.get_head_position()
         x, y = self.direction
         new = ((cur[0] + x) % GRID_WIDTH, (cur[1] + y) % GRID_HEIGHT)
-        if new in self.positions[3:]:
+        
+        if not ghost_mode and new in self.positions[3:]:
             return False
         else:
             self.positions.insert(0, new)
